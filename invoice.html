@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "invoice">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            label{
+
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 1.3em;
+            }
+
+            #bogini{
+                border: 2px solid lightseagreen;
+            }
+
+            th{
+                font-size: 1.2em;
+                font-weight: bold;
+                background: whitesmoke;
+            }
+        </style>
+    
+    <link href="css/onsenui.css" rel="stylesheet">
+    <link href="css/onsen-css-components.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+‪<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+          <script src="js/bootstrap.min.js"></script><script src="js/onsenui.min.js"></script>
+          <link rel="stylesheet" href="css/font-awesome.min.css"/>
+          <script src="js/jquery-1.11.3.js"></script>
+        ‪<script src="js/bootstrap.min.js"></script>
+         <script src = "js/angular.min.js"></script>
+          <script src = "js/angular-route.min.js"></script>
+    </head>
+    <body ng-controller = "InvoiceController">
+
+        <div class="container-fluid">
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                        <div style="height: 100%;width:100%; padding: 1px 0 0 0; background:white;" >
+                                <div class="card card--material" style="background:white;" id = "bogini">
+                                  <div class="card__title card--material__title" style="text-align:left; color: darkblue;">invoice sheet<img src = "images/vitamins.png" width="200" height="200"></div>
+                                  <div class="card__content card--material__content" style = "text-align:left;color: black;">
+                                      <label>Date</label>
+                                      <input type="date" id="dte" class="form-control">
+                                      <label>Invoice#</label>
+                                      <input type="text" id="invoice" class="form-control">
+                                      <label>Customer Name</label>
+                                      <input type="text" id="cname" class="form-control">
+                                      <label>Product Name</label>
+                                      <input type="text" id="pname" class="form-control">
+                                      <label>Quantity</label>
+                                      <input type="number" id="qty" class="form-control">
+                                      <label>Rate</label>
+                                      <input type="number" id="rate" class="form-control">
+
+                                      <button type="button" id="btn" class="button--large--cta" ripple>Update</button>
+
+                                  </div>
+                                  
+                                </div>
+
+                                
+                              </div> 
+                             
+
+                </div>
+                <div class=" col-md-6 card card-material" style="background:white; border:1px black solid;">
+                       <table class="table table-responsive table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>2019-06-06</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>Invoice#</th>
+                                </tr>
+                                <tr>
+                                        <th>Customer Name</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Desc</th>
+                                        <th>Qty</th>
+                                        <th>Rate</th>
+                                        <th>Extended</th>
+                                    </tr>
+                            </thead>
+
+                            <tbody>
+
+                            </tbody>
+                       </table>
+                    </div>
+            </div>
+
+        </div>
+    
+    </body>
+</html>
