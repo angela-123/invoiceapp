@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "app">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+                label{
+    
+                    font-size: 1.4em;
+                    color: black;
+                }
+                th{
+                    color: black;
+                    font-size: 1.2em;
+                    background: orange;
+                }
+
+                #btn{
+                    background: black;
+                }
+    
+                td{
+                  color:black;
+                  font-size: 1.1em;
+                }
+            </style>
+            <link href="css/onsenui.css" rel="stylesheet">
+            <link href="css/onsen-css-components.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+        ‪<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+                  <script src="js/bootstrap.min.js"></script><script src="js/onsenui.min.js"></script>
+                  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+                  <script src="js/jquery-1.11.3.js"></script>
+                ‪<script src="js/bootstrap.min.js"></script>
+                 <script src = "js/angular.min.js"></script>
+                  <script src = "js/angular-route.min.js"></script>
+                  <script src = "customers.js"></script>
+    </head>
+    <body ng-controller = "AppController" >
+            <br>
+            <br>
+                <div class="container-fluid">
+                    <div class="container-row">
+                      <div class="col-md-3">
+                          <label>customer name</label>
+                          <input type="text" id="cname" class="form-control" placeholder="customername" ng-model = "customer.name">
+                          <label>address</label>
+                          <input type="text" id="address" class="form-control" placeholder="address" ng-model = "customer.address">
+                          <label>phone#</label>
+                          <input type="text" id="phone" class="form-control" placeholder="phoneno" ng-model = "customer.phone">
+                          <label>email</label>
+                          <input type="email" id="email" class="form-control" placeholder="email" ng-model = "customer.email">
+                          
+                          <button type="button" id="btn" class="button--large--cta" ripple  ng-click = "addData()">Save Record</button>
+                          <button type="button" id="btb" class="button--large--cta " ripple  ng-click = "UpdateData(e)">Edit Record</button>
+
+                      </div>
+                      <div class="col-md-6">
+                      <table class="table table-responsive table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>customername</th>
+                                    <th>address</th>
+                                    <th>phone#</th>
+                                    <th>email</th>
+                                    <th>image</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr ng-repeat = "cust in customers" ng-click = "BindSelectedData(cust)">
+                                    <td>{{cust.name}}</td>
+                                    <td>{{cust.address}}</td>
+                                    <td>{{cust.phone}}</td>
+                                    <td>{{cust.email}}</td>
+                                    
+                                </tr>
+                            </tbody>
+      
+                        </table>
+                        </div>
+                      </div>
+                      
+                      
+                </div>
+    
+    </body>
+</html>
